@@ -1,10 +1,10 @@
-<?php?>
+
 <html>
     <head>
         <title>Forum Test</title>
         
-        <!--CSS Stylesheet-->
-        <link rel="stylesheet" href="ssheet.css"/>
+        <!--CSS/PHP Stylesheets-->
+        <link rel="stylesheet" href="palette.php" />
         
         <!--Bootstrap imports-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
@@ -13,6 +13,8 @@
     </head>
     
     <body>
-        <div class="col-xs-12" id="header-bar-main"></div>
+        <div class="col-xs-12" id="header-bar-main">
+            <h3>title</h3>
+        </div>
     </body>
 </html>
