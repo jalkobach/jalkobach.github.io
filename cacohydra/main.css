@@ -1,0 +1,130 @@
+:root {
+    --cacoheight: 10vw;
+    --cacowidth: 10vw;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+@keyframes background {
+    0% {
+        background: radial-gradient(black 0, #3d5480 100%);
+    }
+    33% {
+        background: radial-gradient(#3d5480 0, black 50%, #3d5480 100%);
+    }
+    67% {
+        background: radial-gradient(black 0, #3d5480 50%, black 100%);
+    }
+    100% {
+        background: radial-gradient(black 0, #3d5480 100%);
+    }
+}
+
+@keyframes cacodead {
+    0% { background-position: left center; }
+    100% { background-position: right center; }
+}
+
+@keyframes cacosprites {
+    100% { background-position: -100%; }
+}
+
+@keyframes fadeaway {
+    0% { opacity: 1; }
+    20% { opacity: 0; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes hover {
+    0% {
+        left: calc(50% - (1.5 * var(--cacowidth)));
+        top: calc(50% - var(--cacoheight));
+    }
+    20% {
+        left: calc(50% - var(--cacowidth));
+        top: calc(50% - (0.5 * var(--cacoheight)));
+    }
+    50% {
+        left: calc(50% - (0.5 * var(--cacowidth)));
+        top: calc(50%);
+    }
+    80% {
+        left: calc(50%);
+        top: calc(50% - (0.5 * var(--cacoheight)));
+    }
+    100% {
+        left: calc(50% + (0.5 * var(--cacowidth)));
+        top: calc(50% - var(--cacoheight));
+    }
+}
+
+body {
+    animation: background 0.75s infinite;
+    background: radial-gradient(black 0, #3d5480 100%);
+    cursor: crosshair;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    perspective: 200px;
+}
+
+div.caco {
+    min-height: var(--cacoheight);
+    min-width: var(--cacowidth);
+    position: absolute;
+    user-select: none;
+    z-index: 200;
+}
+
+div.caco--dead {
+    animation: cacodead 0.375s steps(5), fadeaway 0.75s 3s ease forwards;
+    animation-fill-mode: forwards;
+    background: url('sprites/cacodead.png') left center;
+    background-size: cover;
+}
+
+div.caco--live {
+    animation: cacosprites 1s steps(7) reverse infinite, hover 1.25s linear alternate infinite none running;
+    background: url('sprites/caco.png') left center;
+    background-size: cover;
+}
+
+img.grid {
+    height: auto;
+    opacity: 0.5;
+    position: absolute;
+    user-select: none;
+    width: 200vw;
+    z-index: -100;
+}
+
+img#grid__bottom {
+    left: -50vw;
+    top: 0%;
+    transform: rotateX(75deg);
+}
+
+img#grid__top {
+    left: -50vw;
+    top: -50vw;
+    transform: rotateX(75deg);
+}
+
+p#text {
+    color: #3c9cd7;
+    font-family: 'Press Start 2P';
+    font-size: 5vh;
+    left: 0;
+    line-height: 5vh;
+    margin: 0;
+    min-width: 100vw;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    top: 45vh;
+    user-select: none;
+    z-index: -50;
+}
