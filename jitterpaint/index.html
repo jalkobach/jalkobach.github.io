@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link href="jalkobase.css" rel="stylesheet"/>
+        <link href="main.css" rel="stylesheet"/>
+        <meta charset="utf-8"/>
+        <title>Jitterpaint</title>
+    </head>
+    <body>
+        <div class="cursor" id="cursor--pencil"></div>
+
+        <grid col="3fr 1vh 1fr" id="program__wrapper">
+            <div id="program__wrapper__canvas">
+                <canvas class="no-select" id="program__canvas"></canvas>
+            </div>
+            <spacer></spacer>
+            <grid id="program__toolkit" row="2fr 1vh 1fr">
+                <grid col="1fr 1fr 1fr" id="program__toolkit__colors" row="1fr 1fr 1fr 1fr 1fr 1fr 1fr">
+                    <div class="program__toolkit__color" id="program__toolkit__color__red-dark"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__red"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__red-light"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__orange-dark"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__orange"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__orange-light"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__yellow-dark"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__yellow"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__yellow-light"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__green-dark"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__green"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__green-light"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__blue-dark"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__blue"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__blue-light"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__violet-dark"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__violet"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__violet-light"></div>
+                    <div class="program__toolkit__color selected" id="program__toolkit__color__black"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__grey"></div>
+                    <div class="program__toolkit__color" id="program__toolkit__color__white"></div>
+                </grid>
+                <spacer></spacer>
+                <grid col="1fr 1fr" id="program__toolkit__tools" row="1fr 1fr 1fr">
+                    <!-- <flex class="program__toolkit__tool" id="program__toolkit__tool__eraser"> <img class="no-select program__toolkit__tool__icon" src="svg/eraser.svg"/> </flex> -->
+                    <flex class="program__toolkit__tool selected" id="program__toolkit__tool__pencil">
+                        <img class="no-select program__toolkit__tool__icon" src="svg/pencil.svg"/>
+                    </flex>
+                    <flex class="program__toolkit__static program__toolkit__tool" id="program__toolkit__tool__clear">
+                        <img class="no-select program__toolkit__tool__icon" src="svg/squared-cross.svg"/>
+                    </flex>
+                    <flex class="program__toolkit__tool" id="program__toolkit__tool__brush">
+                        <img class="no-select program__toolkit__tool__icon" src="svg/brush.svg"/>
+                    </flex>
+                    <flex class="program__toolkit__static program__toolkit__tool" id="program__toolkit__tool__save">
+                        <img class="no-select program__toolkit__tool__icon" src="svg/save.svg"/>
+                    </flex>
+                    <flex class="program__toolkit__static program__toolkit__tool" id="program__toolkit__tool__github">
+                        <img class="no-select program__toolkit__tool__icon" src="svg/github.svg"/>
+                    </flex>
+                    <flex class="program__toolkit__static program__toolkit__tool" dir="column" id="program__toolkit__tool__name">
+                        <h4 class="no-select">JITTERPAINT</h4>
+                    </flex>
+                </grid>
+            </grid>
+
+            <flex dir="column" id="copy__modal">
+                <img id="copy__modal__image" src=""/>
+                <p class="no-select" id="copy__modal__close">close modal</p>
+            </flex>
+        </grid>
+
+        <script src="gif/LZWEncoder.js"></script>
+        <script src="gif/NeuQuant.js"></script>
+        <script src="gif/GIFEncoder.js"></script>
+        <script src="gif/b64.js"></script>
+
+        <script src="jalkobase.js"></script>
+        <script src="init.js"></script>
+        <script src="gamepad.js"></script>
+        <script src="cursor.js"></script>
+        <script src="select.js"></script>
+        <script src="canvas.js"></script>
+        <script src="jitter.js"></script>
+    </body>
+</html>
