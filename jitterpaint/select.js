@@ -48,7 +48,7 @@ let selecthandle = () => {
         }
         else if (toolname === 'name') {}
         else if (toolname === 'github') {
-            window.open('', '_blank')
+            window.open('https://github.com/jalkobach/jitterpaint', '_blank')
         }
         else if (toolname === 'clear') {
             paths = {}
