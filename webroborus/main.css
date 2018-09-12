@@ -1,0 +1,43 @@
+:root {
+	--color-green: rgb(148, 178, 28);
+	--color-green--pulse: rgb(182, 196, 6);
+	--color-red: rgb(253, 60, 6);
+	--color-red--pulse: rgb(255, 91, 0);
+}
+
+@keyframes greenpulse {
+	from { background-color: var(--color-green); }
+	to { background-color: var(--color-green--pulse); }
+}
+
+@keyframes redpulse {
+	0%, 25%, 35%, 55%, 65%, 100% { background-color: var(--color-red); }
+	30%, 60% { background-color: var(--color-red--pulse); }
+}
+
+body {
+	cursor: pointer;
+	overflow: hidden;
+}
+
+div#body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	height: 100vh;
+	width: 100vw;
+
+	background-color: var(--color-green);
+}
+
+img#uro {
+	height: 66vh;
+	width: 66vh;
+
+	user-select: none;
+}
