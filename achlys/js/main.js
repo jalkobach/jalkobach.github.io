@@ -37,7 +37,7 @@ for (let _b of backwardMains) _b.onclick = () => {
 	moveScreens(document.querySelector(`div#screen--main_0r`), false)
 }
 
-let _j = {}
+let _j = false
 setInterval(() => {
 	let _x = new XMLHttpRequest()
 	_x.overrideMimeType('application/json')
@@ -46,7 +46,7 @@ setInterval(() => {
 		console.log(this.status)
 		if (this.readyState === 4 && this.status === 200) { 
 			_j = JSON.parse(this.responseText)
-			console.log(JSON.parse(this.responseText))
+			console.log(_j)
 		}
 	}
 	_x.open('GET', '../directory.json', true)
