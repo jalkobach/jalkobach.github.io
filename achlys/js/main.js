@@ -56,7 +56,7 @@ mainHeader.onmouseenter = () => {
 */
 
 let _j
-function readDir (_j) {
+setInterval(() => {
 	let _x = new XMLHttpRequest()
 	_x.onreadystatechange = () => {
 		console.log(this.readyState)
@@ -65,8 +65,6 @@ function readDir (_j) {
 	}
 	_x.open('GET', '../directory.json', true)
 	_x.send()
-}
-readDir(_j)
-setInterval(readDir(_j), 900000)
+}, 900000)
 
 console.log(_j)
