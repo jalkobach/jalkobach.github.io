@@ -56,7 +56,7 @@ mainHeader.onmouseenter = () => {
 */
 
 let _j
-const readDir = function (_j) {
+function readDir (_j) {
 	let _x = new XMLHttpRequest()
 	_x.onreadystatechange = () => { if (this.readyState === 4 && this.status === 200) _j = this.responseText }
 	_x.open('GET', 'directory.json', true)
