@@ -35,27 +35,9 @@ for (let _f of forwardMains) _f.onclick = () => {
 for (let _b of backwardMains) _b.onclick = () => {
 	_stage = 0
 	moveScreens(document.querySelector(`div#screen--main_0r`), false)
-	}
-
-
-// HEADER CHANGE COLOR ON MOUSE ENTER
-/*
-let mainHeader = document.querySelector('p#screen--main_0r__header')
-mainHeader.onmouseenter = () => {
-	for (let _p of mainHeader.querySelectorAll('span')) {
-		let _r = Math.floor(Math.random() * 4)
-		if (_r == 0) _p.style.color = 'var(--about)'
-		else if (_r == 1) _p.style.color = 'var(--contact)'
-		else if (_r == 2) _p.style.color = 'var(--gallery)'
-		else if (_r == 3) _p.style.color = 'var(--projects)'
-	}
 }
- mainHeader.onmouseleave = () => {
-	for (let _p of mainHeader.querySelectorAll('span')) _p.style.color = 'var(--foreground)'
-}
-*/
 
-let _j
+let _j = {}
 setInterval(() => {
 	let _x = new XMLHttpRequest()
 	_x.onreadystatechange = () => {
