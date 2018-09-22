@@ -53,3 +53,4 @@ setInterval(() => {
 }, 900000)
 
 let _k = require('../directory.json')
+console.log(_k)
