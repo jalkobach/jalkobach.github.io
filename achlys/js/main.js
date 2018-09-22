@@ -52,6 +52,3 @@ setInterval(() => {
 	_x.open('GET', '../directory.json', true)
 	_x.send()
 }, 900000)
-
-let _k = require('../directory.json')
-console.log('k' + _k)
