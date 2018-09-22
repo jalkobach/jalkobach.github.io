@@ -1,0 +1,16 @@
+{
+	"about": "s. is an animator and illustrator currently based in minneapolis. that's about all for now",
+	"gallery": {
+		"_loose": [
+			{
+				"path": "cdn/img_0000.jpg",
+				"type": "image",
+				"title": "dumb cat",
+				"altText": "look at the dumb fuck",
+				"caption": "thanks ddg",
+				"tags": [ "test", "cat" ],
+				"date": [ 2018, 8, 23, 17, 23, -6 ]
+			}
+		]
+	}
+}
