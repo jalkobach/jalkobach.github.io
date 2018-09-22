@@ -40,6 +40,7 @@ for (let _b of backwardMains) _b.onclick = () => {
 let _j = {}
 setInterval(() => {
 	let _x = new XMLHttpRequest()
+	_x.overrideMimeType('application/json')
 	_x.onreadystatechange = () => {
 		console.log(this.readyState)
 		console.log(this.status)
@@ -53,4 +54,4 @@ setInterval(() => {
 }, 900000)
 
 let _k = require('../directory.json')
-console.log(_k)
+console.log('k' + _k)
