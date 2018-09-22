@@ -63,7 +63,7 @@ function readDir (_j) {
 		console.log(this.status)
 		if (this.readyState === 4 && this.status === 200) _j = this.responseText
 	}
-	_x.open('GET', '../../directory.json', true)
+	_x.open('GET', '../directory.json', true)
 	_x.send()
 }
 readDir(_j)
