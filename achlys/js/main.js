@@ -61,10 +61,11 @@ setInterval(() => {
 	_x.onreadystatechange = () => {
 		console.log(this.readyState)
 		console.log(this.status)
-		if (this.readyState === 4 && this.status === 200) _j = this.responseText
+		if (this.readyState === 4 && this.status === 200) { 
+			_j = this.responseText
+			console.log(this.responseText)
+		}
 	}
 	_x.open('GET', '../directory.json', true)
 	_x.send()
 }, 900000)
-
-console.log(_j)
