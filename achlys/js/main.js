@@ -62,8 +62,8 @@ setInterval(() => {
 		console.log(this.readyState)
 		console.log(this.status)
 		if (this.readyState === 4 && this.status === 200) { 
-			_j = this.responseText
-			console.log(this.responseText)
+			_j = JSON.parse(this.responseText)
+			console.log(JSON.parse(this.responseText))
 		}
 	}
 	_x.open('GET', '../directory.json', true)
