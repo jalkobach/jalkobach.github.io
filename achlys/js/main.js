@@ -37,15 +37,14 @@ for (let _b of backwardMains) _b.onclick = () => {
 	moveScreens(document.querySelector(`div#screen--main_0r`), false)
 }
 
+const update = function (_j) {
+	document.querySelector('div#screen--about_1r__right p').innerHTML = _j.about
+}
+
 (function (_p) {
 	let _x = new XMLHttpRequest()
 	_x.overrideMimeType('application/json')
-	_x.onreadystatechange = function () {
-		if (this.readyState === 4 && this.status === 200) { 
-			_j = JSON.parse(this.responseText)
-			console.log(_j)
-		}
-	}
+	_x.onreadystatechange = function () { if (this.readyState === 4 && this.status === 200) update(JSON.parse(this.responseText)) }
 	_x.open('GET', _p, true)
 	_x.send()
 	setTimeout(this, 900000)
