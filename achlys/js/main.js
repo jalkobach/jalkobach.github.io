@@ -49,4 +49,4 @@ for (let _b of backwardMains) _b.onclick = () => {
 	_x.open('GET', _p, true)
 	_x.send()
 	setTimeout(this, 900000)
-})('../directory.json')
+})('directory.json')
