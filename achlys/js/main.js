@@ -1,6 +1,5 @@
 const screens = document.querySelectorAll('div.screen'), mainScreen = screens[0]
-let _w = window.innerWidth, _h = window.innerHeight, _stage, _j = {}
-window.onresize = () => {
+let _w = window.innerWidth, _h = window.innerHeight, _stage
 	_w = window.innerWidth
 	_h = window.innerHeight
 }
