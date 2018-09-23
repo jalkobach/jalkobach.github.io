@@ -2,7 +2,7 @@ const screens = document.querySelectorAll('div.screen'), mainScreen = screens[0]
 let _w = window.innerWidth, _h = window.innerHeight, _stage
 	_w = window.innerWidth
 	_h = window.innerHeight
-}
+
 _stage = mainScreen.offsetLeft / (-1 * _w)
 
 let backwardMains = document.querySelectorAll('div.backward__main'),
