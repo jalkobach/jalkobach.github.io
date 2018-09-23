@@ -44,6 +44,7 @@ setInterval(() => {
 	_x.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) { 
 			_j = JSON.parse(this.responseText)
+			console.log(_j)
 		}
 	}
 	_x.open('GET', '../directory.json', true)
