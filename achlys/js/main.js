@@ -1,5 +1,5 @@
 const screens = document.querySelectorAll('div.screen'), mainScreen = screens[0]
-let _w = window.innerWidth, _h = window.innerHeight, _stage
+let _w = window.innerWidth, _h = window.innerHeight, _stage, _j = {}
 window.onresize = () => {
 	_w = window.innerWidth
 	_h = window.innerHeight
@@ -37,8 +37,7 @@ for (let _b of backwardMains) _b.onclick = () => {
 	moveScreens(document.querySelector(`div#screen--main_0r`), false)
 }
 
-let _j = false
-setInterval(() => {
+(function (_p) {
 	let _x = new XMLHttpRequest()
 	_x.overrideMimeType('application/json')
 	_x.onreadystatechange = function () {
@@ -47,6 +46,7 @@ setInterval(() => {
 			console.log(_j)
 		}
 	}
-	_x.open('GET', '../directory.json', true)
+	_x.open('GET', _p, true)
 	_x.send()
-}, 900000)
+	setTimeout(this, 900000)
+})('../directory.json')
