@@ -42,7 +42,6 @@ for (let _b of backwardMains) _b.onclick = () => {
 
 (function (_p) {
 	let _x = new XMLHttpRequest()
-	_x.overrideMimeType('application/json')
 	_x.onreadystatechange = function () { if (this.readyState === 4 && this.status === 200) update(JSON.parse(this.responseText)) }
 	_x.open('GET', _p, true)
 	_x.send()
