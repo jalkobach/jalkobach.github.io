@@ -38,7 +38,7 @@ for (let _b of backwardMains) _b.onclick = () => {
 }
 
 const update = function (_j) {
-	document.querySelector('div#screen--about_1r__right p').innerHTML = _j.about
+	document.querySelector('div#screen--about_1r__right>p').innerHTML = _j.about
 }
 
 (function (_p) {
