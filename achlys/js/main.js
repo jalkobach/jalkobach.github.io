@@ -41,12 +41,9 @@ let _j = false
 setInterval(() => {
 	let _x = new XMLHttpRequest()
 	_x.overrideMimeType('application/json')
-	_x.onreadystatechange = () => {
-		console.log(this.readyState)
-		console.log(this.status)
+	_x.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) { 
 			_j = JSON.parse(this.responseText)
-			console.log(_j)
 		}
 	}
 	_x.open('GET', '../directory.json', true)
