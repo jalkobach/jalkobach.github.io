@@ -21,6 +21,10 @@ const moveScreens = function (_n, _b) {
 	}
 }
 
+const update = function (_j) {
+	document.querySelector('div#screen--about_1r__right>p').innerHTML = _j.about
+}
+
 for (let _f of forwardMains) _f.onclick = () => {
 	_stage = 1
 	let _s
@@ -34,10 +38,6 @@ for (let _f of forwardMains) _f.onclick = () => {
 for (let _b of backwardMains) _b.onclick = () => {
 	_stage = 0
 	moveScreens(document.querySelector(`div#screen--main_0r`), false)
-}
-
-const update = function (_j) {
-	document.querySelector('div#screen--about_1r__right>p').innerHTML = _j.about
 }
 
 (function (_p) {
