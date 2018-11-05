@@ -32,21 +32,9 @@ function __init () {
 			profile: `shaman`
 		},
 		{
-			name: `Red Knight Beta`,
-			team: 1,
-			slot: 0,
-			profile: `redknight`
-		},
-		{
-			name: `Red Knight Alpha`,
+			name: `Red Knight`,
 			team: 1,
 			slot: 1,
-			profile: `redknight`
-		},
-		{
-			name: `Red Knight Theta`,
-			team: 1,
-			slot: 2,
 			profile: `redknight`
 		}
 	], `gr`, `svs`)
