@@ -389,7 +389,7 @@ function draw_controls (character) {
 
 		// Draw icons for buttons.
 		let fight_icon = new Image()
-		fight_icon.src = `assets/sprites/_icons/fight.png`
+		fight_icon.src = `assets/sprites/icons/fight.png`
 		context.drawImage(
 			fight_icon,
 			301 + ((window.innerWidth - 800) / 2),
@@ -397,7 +397,7 @@ function draw_controls (character) {
 			48, 48
 		)
 		let skills_icon = new Image()
-		skills_icon.src = `assets/sprites/_icons/skills.png`
+		skills_icon.src = `assets/sprites/icons/skills.png`
 		context.drawImage(
 			skills_icon,
 			351 + ((window.innerWidth - 800) / 2),
@@ -405,7 +405,7 @@ function draw_controls (character) {
 			48, 48
 		)
 		let items_icon = new Image()
-		items_icon.src = `assets/sprites/_icons/items.png`
+		items_icon.src = `assets/sprites/icons/items.png`
 		context.drawImage(
 			items_icon,
 			401 + ((window.innerWidth - 800) / 2),
@@ -413,7 +413,7 @@ function draw_controls (character) {
 			48, 48
 		)
 		let run_icon = new Image()
-		run_icon.src = `assets/sprites/_icons/run.png`
+		run_icon.src = `assets/sprites/icons/run.png`
 		context.drawImage(
 			run_icon,
 			451 + ((window.innerWidth - 800) / 2),
