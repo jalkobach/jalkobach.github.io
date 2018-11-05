@@ -1,7 +1,7 @@
 let DDRPG
 
 const PUZZLE = new Worker(`puzzle.js`)
-PUZZLE.postMessage({ command: `start`, details: `` })
+//PUZZLE.postMessage({ command: `start`, details: `` })
 
 const CANVAS = document.querySelector(`canvas`)
 let context = CANVAS.getContext(`2d`)
