@@ -1,7 +1,10 @@
 let DDRPG
 
 const PUZZLE = new Worker(`puzzle.js`)
-//PUZZLE.postMessage({ command: `start`, details: `` })
+PUZZLE.postMessage({ command: `start`, details: `` })
+PUZZLE.onmessage = (e) => {
+	console.log(e.data)
+}
 
 const CANVAS = document.querySelector(`canvas`)
 let context = CANVAS.getContext(`2d`)
